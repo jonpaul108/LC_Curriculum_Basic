@@ -23,9 +23,9 @@ By implementing the above strategies, you should be able to solve the prompt by:
 
 ### Objectives
 By the end of this unit, you should have:
-- Better understanding of common errors
-- Further understanding of your debugging process
-- Stronger ability to read code written by others
-- Deeper understanding of some common methods
-- Deeper understanding of basic Javascript syntax
+- *Better understanding of common errors*
+- *Further understanding of your debugging process*
+- *Stronger ability to read code written by others*
+- *Deeper understanding of some common methods*
+- *Deeper understanding of basic Javascript syntax*
 

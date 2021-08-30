@@ -4,9 +4,9 @@ This unit challenges understanding of data access using dot and bracket notation
 
 ### Objectives
 The goal is for you to review or gain the following:
-- *Comfortablility with indexes in strings and arrays*
+- *Strong skills working with string and array indexes*
 - *Accurate implementation of dot vs bracket* 
-- *Understanding of chaining dot and bracket* 
+- *Understand chaining dot and bracket* 
 - *Decreased reliance on unnecessary loops*
   
 ### Constraints

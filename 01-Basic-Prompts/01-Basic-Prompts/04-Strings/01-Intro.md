@@ -4,9 +4,9 @@ An often forgotten topic is strings. Strings are a useful type for data ["that c
 
 ### Objectives 
 By the end of this lesson you should have practiced or learned:
-- Rightful implementations of concatenation syntax
-- Competent string access
-- Familiarity with  iteration
-- Deep understanding of string comparisons
+- *Rightful implementations of concatenation syntax*
+- *Competent string access*
+- *Familiarity with  iteration*
+- *Deep understanding of string comparisons*
 
 

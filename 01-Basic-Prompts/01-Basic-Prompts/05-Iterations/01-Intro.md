@@ -3,10 +3,10 @@ This is the most challenging and longest unit in the basic section. It is built 
 
 ### Objectives
 The goal is to review or acquire understanding of:
-- Ability to use complex iterations (including iterating by various numbers and decrementing)
-- Complete understand of loops as general purpose iterations
-- Elevated problem solving and prompt comprehension skills
-- Deeper understanding of data and data structures
+- *Ability to use complex iterations (including iterating by various numbers and decrementing)*
+- *Complete understand of loops as general purpose iterations*
+- *Elevated problem solving and prompt comprehension skills*
+- *Deeper understanding of data and data structures*
 ######
 By the end of this unit, you will be solving prompts similar to beginning level of the intermediate section.
 ######

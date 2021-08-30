@@ -37,9 +37,7 @@ Here are some recommendations:
 * *Stop when you run out of time.*
 * *If you did not solve the problem in the time limit, try again from scratch 24-48 hours later.*
 * *Give yourself plenty of time to comprehend, understand, and plan for a prompt. 5 - 10 minutes is normal!*
-* *Practice the style of explaining you plan on using during the TAA while solving the prompts.*
-* *Review what you did well.* 
-* *Reflect on where you might have wasted time.*
+* *Practice explaining your plan.*
 * *Reflect on your performance and progress. Consider how to improve.*
 * *Take your coach's advice.*
 
