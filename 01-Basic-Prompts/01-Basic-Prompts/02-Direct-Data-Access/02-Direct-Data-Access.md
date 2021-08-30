@@ -1,24 +1,4 @@
-# Data Access
-
-This unit challenges understanding of data access using dot and bracket notation, indexes, and keys.
-
-### Objectives
-The goal is for the student to deepen their understanding of:
-- indexes in strings and arrays
-- dot vs bracket with objects
-- chaining dot and bracket notation
-- decreased reliance on unnecessary loops
-  
-### Constraints
-All prompts are solvable without iterations of any kind. In other words, *Loops/iterations should not be used to solve these problems.*  
-
-######
-Together, the instructions and the inputs/outputs should present a clear picture as to the expected structure of data, providing enough information to clarify why a loop is unnecessary in each situation.  
-
-If you believe a loop is needed, read the prompt directions again, or check the example input/outputs for clarification. 
-######
-
-  ### !challenge
+### !challenge
 
 * type: code-snippet
 * id: direct-access-1
@@ -27,11 +7,10 @@ If you believe a loop is needed, read the prompt directions again, or check the 
 
 ### !question
 
-Given a string and an index, return the character at the given index. 
+Given a string `str` and an index `ind`, return the character at the given index. 
 
 ```js
-  var actual = givenIndex('string', 2);
-  var expected = 'r';
+console.log(givenIndex('string', 2)) //=> "r"
 ``` 
 
 ### !end-question
@@ -87,11 +66,10 @@ describe('givenIndex', function() {
 
 ### !question
 
-Given an array of words and an index, return the word at the given index.
+Given an array of words `arr` and an index `ind`, return the word at the given index.
 
 ```js
-  var actual = givenIndex2(['no', 'loop', 'necessary'], 1);
-  var expected = 'loop';
+console.log(givenIndex2(['no', 'loop', 'necessary'], 1)) //=> "loop"
 ``` 
 
 ### !end-question
@@ -136,9 +114,6 @@ describe('givenIndex', function() {
 
 
 
-
-
-
 ### !challenge
 
 * type: code-snippet
@@ -148,14 +123,12 @@ describe('givenIndex', function() {
 
 ### !question
 
-Given an object `obj` and a key `char`, return the value found at `char`.
+Given an object `obj` and a key `char`, return the value found at the property `char`.
   
   
 ```js
   
-  var actual = objectAccess({a:'gym', b:'pizzaria',c:'shops'},'a');
-  var expected = 'gym';
-
+  console.log(objectAccess({a:'gym', b:'pizzaria',c:'shops'},'a')) //=> "gym"
 ``` 
 
 ### !end-question
@@ -206,14 +179,11 @@ describe('objectAccess', function() {
 
 ### !question
 
-  Given an array of different length words and two different indexes, return the index of the word with the greater length.
+  Given an array of different length words `arr` and two different index numbers, `ind1` and `ind2`, return the index of the word with the greater length.
   
   
 ```js
-  
-  var actual = longerWord(['splendid', 'ski', 'hammer', 'giant', 'liquids'], 3, 0);
-  var expected = 0;
-
+  console.log(longerWord(['splendid', 'ski', 'hammer', 'giant', 'liquids'], 3, 0)) //=> 0
 ``` 
 
 ### !end-question
@@ -221,7 +191,7 @@ describe('objectAccess', function() {
 #### !placeholder
 
 ```js
-function longerWord(arr, idx1, idx2) {
+function longerWord(arr, ind1, ind2) {
 
 }
 ```
@@ -241,16 +211,16 @@ describe('longerWord', function() {
     expect(longerWord(arr1, 3, 0)).to.be.a('number');
   })
 
-    it("should return the expected index", function() {
-      expect(longerWord(arr1, 1, 2)).to.deep.eq(2);
-      expect(longerWord(arr1, 1, 4)).to.deep.eq(4);
-      expect(longerWord(arr2, 0, 1)).to.deep.eq(0);
-      expect(longerWord(arr2, 3, 2)).to.deep.eq(2);
-    })
+  it("should return the expected index", function() {
+    expect(longerWord(arr1, 1, 2)).to.deep.eq(2);
+    expect(longerWord(arr1, 1, 4)).to.deep.eq(4);
+    expect(longerWord(arr2, 0, 1)).to.deep.eq(0);
+    expect(longerWord(arr2, 3, 2)).to.deep.eq(2);
+  })
 
-    it("should not iterate", function() {
-      expect(longerWord.toString()).to.not.include('for')
-    })
+  it("should not iterate", function() {
+    expect(longerWord.toString()).to.not.include('for')
+  })
 
 })
 ```
@@ -268,27 +238,26 @@ describe('longerWord', function() {
 
 ### !question
 
-Given an array of objects (arr), an index (ind), and a key (k), return the value at the key from the object designated by the given index.
-  
-  
+Given an array of objects `arr`, an index `ind`, and a key `k`, return the value at the key from the object designated by the given index.
   
 ```js
+
+var cities = [
+    {
+      city: 'Paris',
+      month: 'March'
+    },
+    {
+      city: 'Amsterdam',
+      month: 'October'
+    },
+    {
+      city: 'London',
+      month: 'December'
+    },
+  ]
   
-  var actual = nestedAccess([
-      {
-        city: 'Paris',
-        month: 'March'
-      },
-      {
-        city: 'Amsterdam',
-        month: 'October'
-      },
-      {
-        city: 'London',
-        month: 'December'
-      },
-    ], 2, 'month');
-    var expected = 'December';
+  console.log(nestedAccess(cities, 2, 'month')); //=> "December"
 
 ``` 
 
@@ -377,12 +346,9 @@ describe('nestedAccess', function() {
 
 ### !question
 
-Given an array of weather information and an index number, return the weather information found at the key 'expected weather' at the given index.
-    
-  
+Given an array of weather information `weather` and an index number `ind`, return the weather information found at the key 'expected weather' at the given index.
 ```js
-    
-    var actual = weatherInfo([
+  var weatherArr = [
         {
           date: 'January 22nd',
           'expected weather': 'sunny',
@@ -395,9 +361,8 @@ Given an array of weather information and an index number, return the weather in
           date: 'January 24th',
           'expected weather:': 'rainy'
         }
-      ], 0);
-      
-      var expected = 'sunny';
+      ]
+    console.log(weatherInfo(weatherArr, 0)) //=> "sunny";
 
 ``` 
 
@@ -481,24 +446,25 @@ describe('weatherInfo', function() {
 * type: code-snippet
 * id: direct-access-7
 * language: javascript
-* title: sumInnerArrayNums
+* title: Sum Inner Array Nums
 
 ### !question
 
-Given an array containing a single inner array of numbers, return the sum of the first and last numbers of the inner array.
+Given an array containing a single inner array of numbers `arr`, return the sum of the first and last numbers of the inner array.
     
    
 ```js
-    
-    var actual1 = sumInnerArrayNums([
+    var arr1 = [
         [9, 1, 4, 2, 6, 7]
-      ]);
-    var expected1 = 16;
+      ];
     
-    var actual2 = sumInnerArrayNums([
+    var arr2 = [
         [1, 5, 3]
-      ]);
-    var expected2 = 4;
+      ];
+
+
+    console.log(sumInnerArrayNums(arr1)) //=> 16 
+    console.log(sumInnerArrayNums(arr2)) //=> 4
 
 ``` 
 
@@ -568,16 +534,15 @@ describe('sumInnerArrayNums', function() {
 
 ### !question
 
- Given an array or string with an odd number of elements or characters, return the middle element or character.
+ Given an array or string with an odd number of elements or characters `data`, return the middle element or character.
       
   
 ```js
     
-    var actual1 = middle([1, 6, 8]);
-    var expected1 = 6;
+    console.log(middle([1, 6, 8])) //=> 6
 
-    var actual2 = middle('villa');
-    var expected2 = 'l';
+    console.log(middle('villa')) //=> "l"
+   
 
 ``` 
 
@@ -607,13 +572,13 @@ describe('middle', function() {
     const funcString = middle.toString();
   
 
-  if("should not mutate a given array", function() {
+  if("should not mutate the given array", function() {
     const arr1Copy = [...arr1];
     middle(arr1);
     expect(arr1).to.eql(arr1Copy);
   })
 
-  it("should not split a given string", function() {
+  it("should not split the given string", function() {
     expect(funcString).to.not.include('.split');
   })
 

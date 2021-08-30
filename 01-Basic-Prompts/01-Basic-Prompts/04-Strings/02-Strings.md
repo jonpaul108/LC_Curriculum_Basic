@@ -1,18 +1,3 @@
-# Strings
-
-An often forgotten topic is strings. Strings are a useful type for data ["that can be represented in text form"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). This lesson will give you plenty of review practice to get you back up to speed on your string understanding.
-
-### Objectives 
-By the end of this lesson you should have reviewed:
-- concatenation 
-- string access
-- string iteration
-- string comparisons
-
-
-
-##
-
 ### !challenge
 
 * type: code-snippet
@@ -22,16 +7,14 @@ By the end of this lesson you should have reviewed:
 
 ### !question
 
-`FirstAndThird` takes in a string and returns a the first and third character combined into a single string.  
+Given a string `str`, return the first and third character combined into a single string.  
+    
+Note:
 *Do not split or iterate to solve this prompt.*
-        
- 
-
+      
 ```js
-
-    var str1 = 'angel';
-    var actual = firstAndThird(str1);
-    var expected = 'ag';
+ 
+    console.log(firstAndThird("angel")) //=> 'ag'
   
 ``` 
 
@@ -86,19 +69,18 @@ describe('firstAndThird', function() {
 * type: code-snippet
 * id: strings-2
 * language: javascript
-* title: lengthOfStringsMultiplied
+* title: Length Of Strings Multiplied
 
 ### !question
 
-Given two strings, return their lengths multiplied together.
+Given two strings `str1` and `str2`, return their lengths multiplied together.
 
  
 
 ```js
 
-  var actual = lengthOfStringsMultiplied('cat', 'mat');
-  var expected = 9;
-        
+  console.log(lengthOfStringsMultiplied('cat', 'mat')) //=> 9
+
 ``` 
 
 ### !end-question
@@ -154,14 +136,14 @@ describe('lengthOfStringsMultiplied', function() {
 
 ### !question
 
-`LengthAsIndex` takes in two strings, `str1` and `str2`. Return the character of `str1` that exists at the index matching the length of `str2`. The length of`str1` will always be greater than the length of `str2`
-
- 
+Given two strings `str1` and `str2`, return the character of `str1` that exists at the index matching the length of `str2`.  
+  
+Note:  
+The length of`str1` will always be greater than the length of `str2`
 
 ```js
 
-    var actual = lengthAsIndex('cyclone', 'chair');
-    var expected = 'n'; 
+    console.log(engthAsIndex('cyclone', 'chair')) //=> "n"
         
 ``` 
 
@@ -217,19 +199,17 @@ describe("lengthAsIndex", function () {
 
 ### !question
 
-Given a string, return the sum of the indexes.
+Given a string `str`, return the sum of the string's indexes.
 
 
 ```js
 
-  var actual1 = sumIndex('s');
-  var expected1 = 0;
+  console.log(sumIndex('s')) //=> 0
+  
+  console.log(sumIndex('str')) //=> 3
 
-  var actual2 = sumIndex('str');
-  var expected2 = 3;
-
-  var actual3 = sumIndex('str1');
-  var expected3 = 6;
+  
+  console.log(sumIndex('str1')) //=> 6
       
         
 ``` 
@@ -282,21 +262,17 @@ describe('sumIndex', function() {
 
 ### !question
 
-Given two strings `str1` and `str2`, return true if `str2` is the reverse of `str1`, and false if not. 
+Given two strings `str1` and `str2`, return `true` if `str2` when reversed is the same as `str1`. Return `false` if `str2` is not the same as `str1` when reversed. 
 
 
 
 ```js
 
-  var actual1 = isMirror('hello', 'olleh');
-  var expected1 = true;
+  console.log(isMirror('hello', 'olleh')); //=> true
 
-  var actual2 = isMirror('str', 'tsr');
-  var expected2 = false;
+  console.log(isMirror('str', 'tsr')) //=> false
 
-  var actual3 = isMirror('s', 's');
-  var expected3 = true;
-      
+  console.log(isMirror('s', 's')) //=> true  
         
 ``` 
 
@@ -350,23 +326,20 @@ describe('isMirror', function() {
 
 ### !question
 
-Given a string `str` and an array of index numbers `indexes`, use the index numbers to combine characters in the string into a new word. 
+Given a string `str` and an array of index numbers `indexes`, use the index numbers to combine characters in the string into a new word.  
+
+Note: 
 The indexes are in order from left to right.
-
-
 
 ```js
 
 
 
-  var actual1 = hiddenWord( 'lejfmdofne2', [0,1,4,6,8]);
-  var expected = 'lemon';
+  console.log(hiddenWord( 'lejfmdofne2', [0, 1, 4, 6, 8])) //=> "lemon"
 
-  var actual2 = hiddenWord( 'inner till gift', [6, 0, 11, 3, 4]);
-  var expected2 = 'tiger';
+  console.log(hiddenWord( 'inner till gift', [6, 0, 11, 3, 4])) //=> "tiger"
 
-  var actual3 = hiddenWord('same', [1,2]);
-  var expected3 = 'am';
+  console.log(hiddenWord('same', [1, 2])) //=> "am"
       
         
 ``` 

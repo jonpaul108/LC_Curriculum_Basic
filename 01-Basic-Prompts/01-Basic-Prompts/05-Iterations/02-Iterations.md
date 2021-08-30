@@ -1,17 +1,3 @@
-# Iterations
-This is the most challenging and longest unit in the basic section. While you may have come here directly, it is built upon the challenges presented in the previous three units. Your challenge is now to use all your knowledge of objects, arrays, and strings as well as iterations and data access to solve increasingly difficult prompts. 
-
-### Objectives
-The goal is to review or acquire understanding of:
-- complex iterations (including iterating by various numbers and decrementing)
-- general purpose iterations
-- elevated problem solving and prompt comprehension skills
-- deeper understanding of data and data structures
-######
-By the end of this unit, you will be solving prompts similar to beginning level of the intermediate section.
-######
-
-##
 ### !challenge
 
 * type: code-snippet
@@ -23,15 +9,15 @@ By the end of this unit, you will be solving prompts similar to beginning level 
 
 
 Write a function named `pushEveryIndex`
-  Given an array of strings `arr`, push every index and the word found at the index to a new array, and return the new array.
+  Given an array of strings `arr`, push every index and the word found at the index to a new array return the new array.
+  
   The format should look like: 
   `[[index]: [word], [index]: [word]]`
 
 ```js
   //Expected answer
   var arr = ['turtle', 'fox', 'wolf'];
-  var actual = pushEveryIndex(arr);
-  var expected = ['0: turtle', '1: fox', '2: wolf'];
+  console.log(pushEveryIndex(arr)) //=> ['0: turtle', '1: fox', '2: wolf'];
 ``` 
 
 ### !end-question
@@ -83,23 +69,15 @@ describe('pushEveryIndex', function() {
 
 ### !question
 
-
-
-Write a function named `pushFromStart`
 Given an array `arr` and starting number `start`, push every element from `start` in `arr` to a new array. 
 Return the new array.
 
 ```js
-  //example array
   var arr = ['magneto', 'spiderman', 'star lord', 'wolverine', 'iron man', 'doctor strange', 'black widow'];
 
-  //Expected answer 1
-  var actual1 = pushFromStart(arr, 3);
-  var expected1 = ['wolverine', 'iron man', 'doctor strange', 'black widow'];
+  console.log(pushFromStart(arr, 3)) //=> ['wolverine', 'iron man', 'doctor strange', 'black widow'];
 
-  //Expected answer 2
-  var actual2 = pushFromStart(arr, 5);
-  var expected2 = ['doctor strange', 'black widow'];
+  console.log(pushFromStart(arr, 5)) //=> ['doctor strange', 'black widow'];
 ``` 
 
 ### !end-question
@@ -152,22 +130,17 @@ describe('pushFromStart', function() {
 
 ### !question
 
-Write a function named `startToEnd`
 Given an array `arr`, a start number `start`, and an end number `end`, return a new array of every element from `start` to one before `end`.
-If `end` is greater than the length of `arr`, include `undefined` for invalid index.
+If `end` is greater than the length of `arr`, include `undefined` for invalid indexes.
   
 
 ```js
-  //example array
+  
   var arr = ['magneto', 'spiderman', 'star lord', 'wolverine', 'iron man', 'doctor strange', 'black widow'];
 
-  //Expected answer 1
-  var actual = startToEnd(arr, 2, 4);
-  var expected = ['star lord', 'wolverine'];
+  console.log(startToEnd(arr, 2, 4)) //=> ['star lord', 'wolverine'];
 
-  //Expected answer 2
-  var actual = startToEnd(arr, 6, 8 );
-  var expected = ['black widow', undefined];
+  console.log(startToEnd(arr, 6, 8 )) //=> ['black widow', undefined];
 
 ``` 
 
@@ -221,12 +194,11 @@ describe('startToEnd', function() {
 * type: code-snippet
 * id: iterations-4
 * language: javascript
-* title: Iterate By Num
+* title: Iterate by Num
 
 ### !question
 
-Given an array or a string `data` and a number `num`, iterate over `data` from 0 by `num` and push each element or character to a new array, and return the new array. If num is less than or equal to 0, return an empty array
-Return the new array.
+Given an array or a string `data` and a number `num`, iterate over `data` from 0 by `num` and push each element or character to a new array. Return the new array. If num is less than or equal to 0, return an empty array
 
 
 ```js
@@ -234,14 +206,11 @@ Return the new array.
   var arr = ['meteor', 'stars', 'moon', 'comet', 'solar wind', 'pillar of god']
   var str = 'telephone';
 
-  var actual1 = iterateByNum(arr, 3);
-  var expected1 = ['meteor', 'comet'];
+  console.log(iterateByNum(arr, 3)) //=> ['meteor', 'comet'];
 
-  var actual2 = iterateByNum(arr, 2);
-  var expected2 = ['meteor', 'moon', 'solar wind'];
+  console.log(iterateByNum(arr, 2)) //=> ['meteor', 'moon', 'solar wind'];
 
-  var actual3 = iterateByNum(str, 4);
-  var expected3 = ['t', 'p', 'e'];
+  console.log(iterateByNum(str, 4)) //=> ['t', 'p', 'e'];
 ``` 
 
 ### !end-question
@@ -323,17 +292,17 @@ describe('iterateByNum', function() {
 
 ### !question
 
- Given a string or an array of characters `data` and a target character `target`, return the index of the first instance (starting from index 0) `target` appears in `data`. Return -1 if it is not found.
+ Given a string or an array of characters `data` and a target character `target`, return the index of the first instance (starting from index 0) `target` appears in `data`. Return `-1` if `target` is not found.  
+   
+  Note:  
  *Do not use the 'split' method.*
 
 ```js
   var chars1 = 'find me waiting';
-  var actual1 = firstInstance(data, 'i');
-  var expected = 1;
+  console.log(firstInstance(data, 'i')) //=> 1
   
   var chars2 = ['a', 'b', 'c', 'a', 'd', 'a', 'd', 'b', 'c'];
-  var actual2 = firstInstance(chars2, 'd');
-  var expected = 4;
+  console.log(firstInstance(chars2, 'd')) //=> 4
 
 ``` 
 
@@ -396,18 +365,18 @@ describe('firstInstance', function() {
 
 ### !question
 
- Given a string or an array of characters `chars` and a target character `target`, return the index of the last instance `target` is found in `chars`. Return -1 if `target` is not found.
+ Given a string or an array of characters `chars` and a target character `target`, return the index of the last instance `target` is found in `chars`. Return `-1` if `target` is not found.  
+   
+Note:  
  Do not use the 'split' method.
   
 
 ```js
     var chars1 = 'find me waiting';
-    var actual1 = lastInstance(chars1, 'i');
-    var expected = 12;
+    console.log(lastInstance(chars1, 'i')) //=> 12
   
     var chars2 = ['a', 'b', 'c', 'a', 'd', 'a', 'd', 'b', 'c'];
-    var actual2 = lastInstance(chars2, 'd');
-    var expected = 6;
+    console.log(lastInstance(chars2, 'd')) //=> 6
 ``` 
 
 ### !end-question
@@ -471,17 +440,15 @@ describe('lastInstance', function() {
 
 ### !question
 
-Given a string `str` that will always contain two lower case 'x' characters, return an array containing the two indexes where the 'x' characters are found.
+Given a string `str` that will always contain two lower case `"x"` characters, return an array containing the two indexes where the `"x"` characters are found.
   
 
 ```js
   var str1 = 'aDfxkXjexty';
-  var actual1 = twoIndexes(str1);
-  var expected1 = [3,8];
+  console.log(twoIndexes(str1)) //=> [3,8];
 
   var str2 = 'xtestx';
-  var actual2 = twoIndexes(str2);
-  var expected2 = [0,5];
+  console.log(twoIndexes(str2)) //=> [0,5];
 ``` 
 
 ### !end-question
@@ -536,17 +503,14 @@ describe('twoIndexes', function() {
 
 ### !question
 
-  Given a string `str` that will always contain two lower case 'x' characters, return how many characters are between the x's exclusive of the start and ending 'x.'
-  *note:  this problem is probably too hard for beginner*
-
+  Given a string `str` that will always contain two lower case `"x"` characters, return how many characters are between the `"x"`s exclusive of the start and ending `"x"`.  
+  
 ```js
   var str1 = 'aDfxkjexty';
-  var actual1 = twoIndexesExclusive(str1);
-  var expected1 = 3;
+  console.log(twoIndexesExclusive(str1)) //=> 3
 
   var str2 = 'xtestx';
-  var actual2 = twoIndexesExclusive(str2);
-  var expected2 = 4
+  console.log(twoIndexesExclusive(str2)) //=> 4
 ``` 
 
 ### !end-question
@@ -602,21 +566,20 @@ describe('twoIndexesExclusive', function() {
 
 ### !question
 
-  Given a string or an array of characters `chars` and a target character `target`, return true if every character in `chars` matches `target` or false if any characters do nto match `target`.
+  Given a string or an array of characters `chars` and a target character `target`, return `true` if every character in `chars` matches `target` or `false` if any characters do nto match `target`.
   
 
 ```js
+
     var chars1 = 'xxxxxx';
-    var actual1 = everyCharMatch(chars1, 'x');
-    var expected1 = true;
+    console.log(everyCharMatch(chars1, 'x')) //=> true
     
     var chars2 = 'xlxouixkx';
-    var actual2 = everyCharMatch(chars2, 'x');
-    var expected2 = false;
+    console.log(everyCharMatch(chars2, 'x')) //=> false
     
     var chars3 = ['x','x', 'x', 'x', 'x', 'x', 'k'];
-    var actual3 = everyCharMatch(chars3, 'x');
-    var expected3 = false;
+    console.log(everyCharMatch(chars3, 'x')) //=> false
+
 ``` 
 
 ### !end-question
@@ -673,21 +636,18 @@ describe('everyCharMatch', function() {
 
 ### !question
 
-    Given a string or an array of characters `chars` and a target character `target`, return true if every other character (starting from index 0) in `chars` matches `target`, or false if a character does not match.
+  Given a string or an array of characters `chars` and a target character `target`, return `true` if every other character (starting from index 0) in `chars` matches `target`, or `false` if any characters do not match.
   
 
 ```js
     var chars1 = 'xxxxxx';
-    var actual1 = everyOtherCharMatch(chars1, 'x');
-    var expected1 = true;
-    
+    console.log(everyOtherCharMatch(chars1, 'x')) //=> true
+
     var chars2 = 'xlxouixkx';
-    var actual2 = everyOtherCharMatch(chars2, 'x');
-    var expected2 = false;
+    console.log(everyOtherCharMatch(chars2, 'x')) //=> false
     
     var chars3 = ['x','x', 'x', 'x', 'x', 'k', 'x'];
-    var actual3 = everyOtherCharMatch(chars3, 'x');
-    var expected3 = true;
+    console.log(everyOtherCharMatch(chars3, 'x')) //=> true
 ``` 
 
 ### !end-question
@@ -742,15 +702,11 @@ describe('everyOtherCharMatch', function() {
 
 ### !question
 
-    Given a number `num` that is greater than or equal to 0, push the message 'I code everyday' into a new array as many times as the number.
-    Return the new array.
-  
+  Given a number `num` that is greater than or equal to `0`, push the message `"I code everyday"` into a new array as many times as the number `num`. Return the new array.
 
 ```js
 
-   var num = 5;
-   var actual = codeEveryday(num);
-   var expected = ['I code everyday', 'I code everyday', 'I code everyday', 'I code everyday', 'I code everyday'];
+   console.log(codeEveryday(5)) //=> ['I code everyday', 'I code everyday', 'I code everyday', 'I code everyday', 'I code everyday'];
 
 ``` 
 
@@ -802,8 +758,10 @@ describe('codeEveryDay', function() {
 
 ### !question
 
-  Given an array of numbers `arr` containing an even number of elements, sum every two elements and push the numbers into a new array.
-  Note: The new array should have half the length of the passed in array.
+  Given an array of numbers `arr` containing an even number of elements, sum every two elements and push the numbers into a new array.  
+    
+  Note:  
+  The new array should have half the length of the passed in array.
   
 
 ```js

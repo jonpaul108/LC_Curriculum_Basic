@@ -1,32 +1,4 @@
 
-
-# Objects
-
-This set of prompts focuses on working with objects.
-
-### Objectives
- By manipulating data from object literals based on given arguments, you will show your capabilities through:
-
-- Comprehension of prompt directions using instructions and inputs/outputs
-- Correct application of dot/bracket notation
-- Solving complex objects without the use of 'for...in' iterations or built in methods
-- An accurate understanding of object and array differences
-- Nested structure traversal 
-  
-### Before you get started
-This unit builds directly from the last unit. If you would like to review dot/bracket notation through some simpler challenges, the previous unit provides some prompts serving as a review.
-
-### Constraints
-
-Finally, *you should not loop over objects to solve these prompts*.  
-
-To be specific, some of these prompts may require looping over strings or arrays. *Looping over arrays and strings is often valid.* However, *looping over objects is seldom necessary and therefore amounts to an anti-pattern*.  
-
-
-This means you should not loop over any objects to access properties within this practice curriculum, both in this unit and beyond. Furthermore, the use of methods that also loop over objects, including Object.keys and Object.values, should not be implemented.  
-
-
-*It is not typical to loop over an object* in the real world. If you loop over an object, you may still pass some of the prompts or some of the tests, however, it is important you rework such solutions to remove looping over objects.
   ### !challenge
 
 * type: code-snippet
@@ -48,18 +20,15 @@ Given an object `obj` and a key string `prop`, if the string 'key' is a key on t
     key: 'has key';
   }
   
-  var key1 = 'k';
-  var actual1 = fallbackKey(obj1, key1);
-  var expected2 = 'has key';
+  console.log(fallbackKey(obj1, "k")) //=> "has key"
   
   var obj2 = {
     Ted: 'Douglas Adams',
     Angela: 'Toni Morrison',
     Jessy: 'Isabel Allende'
   }
-  var key2 = 'Ted';
-  var actual2 = fallbackKey(obj2, 'Ted');
-  var expected2 = 'Douglas Adams';
+
+  console.log(fallbackKey(obj2, 'Ted')) //=> "Douglas Adams"
 ``` 
 
 ### !end-question
@@ -127,9 +96,9 @@ describe('fallbackKey', function() {
 ### !question
 
 
-`stringOrArrayOfNums` takes in an object `obj` and a string `myKey`. The key either references an array of numbers or a string. If the key is a string, return it. If it is an array, sum the numbers and return the total as a string.
-
-Hint: search "MDN toString" for a helpful method if you need help converting a number to a string
+`stringOrArrayOfNums` takes in an object `obj` and a string `myKey`. The key either references an array of numbers or a string. If the key is a string, return it. If it is an array, sum the numbers and return the total as a string.  
+  
+Note: search "MDN toString" for a helpful method if you need help converting a number to a string
 
 ```js
    var obj = {
@@ -139,10 +108,8 @@ Hint: search "MDN toString" for a helpful method if you need help converting a n
       d: '101'
     }
     
-    var actual = stringOrArrayOfNums(obj, 'a'); 
-    var expected = '10';
-    var actual2 = stringOrArrayOfNums(obj, 'd');
-    var expected = '101';
+    console.log(tringOrArrayOfNums(obj, 'a')) //=> 10
+    console.log(stringOrArrayOfNums(obj, 'd')) //=> 101
 ``` 
 
 ### !end-question
@@ -163,51 +130,51 @@ function stringOrArrayOfNums(obj, myKey) {
 ```js
 describe('stringOrArrayOfNums', function() {
 
-   var obj1 = {
-      a: [1, 2, 3, 4],
-      b: '12',
-      c: [10,20,30,40],
-      d: '101'
-    }
+ var obj1 = {
+    a: [1, 2, 3, 4],
+    b: '12',
+    c: [10,20,30,40],
+    d: '101'
+  }
 
-    var obj1 = {
-      a: [1, 2, 3, 4],
-      b: '12',
-      c: [10,20,30,40],
-      d: '101'
-    };
+  var obj1 = {
+    a: [1, 2, 3, 4],
+    b: '12',
+    c: [10,20,30,40],
+    d: '101'
+  };
 
-    var obj2 = {
-      tables: '20',
-      chairs: [4, 10, 3]
-    }
+  var obj2 = {
+    tables: '20',
+    chairs: [4, 10, 3]
+  }
 
-  
-    it("should return a string", function() {
-      expect(stringOrArrayOfNums({
-        a: '100'
-      },'a')).to.be.a('string');
-      
-    })
 
-  
+  it("should return a string", function() {
+    expect(stringOrArrayOfNums({
+      a: '100'
+    },'a')).to.be.a('string');
+    
+  })
 
-     it("should return a the correct sum as a string when value is an array", function() {
-      expect(stringOrArrayOfNums(obj1,'a')).to.deep.eq('10');
 
-      expect(stringOrArrayOfNums(obj1,'c')).to.deep.eq('100');
 
-      expect(stringOrArrayOfNums(obj2, 'chairs')).to.deep.eq('17');
+   it("should return a the correct sum as a string when value is an array", function() {
+    expect(stringOrArrayOfNums(obj1,'a')).to.deep.eq('10');
 
-    })
+    expect(stringOrArrayOfNums(obj1,'c')).to.deep.eq('100');
 
-    it("should return the correct string when the value is a string", function() {
-      expect(stringOrArrayOfNums(obj1,'b')).to.deep.eq('12');
+    expect(stringOrArrayOfNums(obj2, 'chairs')).to.deep.eq('17');
 
-      expect(stringOrArrayOfNums(obj1,'d')).to.deep.eq('101');
+  })
 
-      expect(stringOrArrayOfNums(obj2, 'tables')).to.deep.eq('20');
-    })
+  it("should return the correct string when the value is a string", function() {
+    expect(stringOrArrayOfNums(obj1,'b')).to.deep.eq('12');
+
+    expect(stringOrArrayOfNums(obj1,'d')).to.deep.eq('101');
+
+    expect(stringOrArrayOfNums(obj2, 'tables')).to.deep.eq('20');
+  })
 
 })
 ```
@@ -225,10 +192,12 @@ describe('stringOrArrayOfNums', function() {
 ### !question
 
 
-  Give an object with numbers as values and two keys as strings, create a new property by combining the keys (key1 + key2) and summing the values, then return the given object. 
+  Give an object with numbers as values `obj` and two keys as strings, create a new property by combining the keys (`key1` + `key2`) and summing the values. Then, return the given object.  
+    
+  Notes:
   - The new key should be the combined keys. 
   - The new value is the sum.
-
+  ######
   **Best Practices Note: Generally, it is considered bad form to mutate an array or object received as an argument. However, the focus of this problem is on accessing and assigning new properties. It is acceptable in this problem for the sake of learning and practice. For more info, read here: https://blog.sapegin.me/all/avoid-mutation/. Don't worry if you don't fully understand the explanation. It would be a great concept to discuss with your coach.
 
 
@@ -240,14 +209,16 @@ describe('stringOrArrayOfNums', function() {
         c: 8,
         d: 7
       };
-  var actual = sumTwoNumbers(obj, 'a', 'b');
-  var expected = {
-        a: 10,
-        b: 3,
-        c: 8,
-        d: 7,
-        ab: 13
-      };
+  console.log(sumTwoNumbers(obj, 'a', 'b')) //=>
+  /* 
+    {
+      a: 10,
+      b: 3,
+      c: 8,
+      d: 7,
+      ab: 13
+    };
+  */
       
 ``` 
 
@@ -258,7 +229,7 @@ describe('stringOrArrayOfNums', function() {
 ```js
 function combineProperties(obj, key1, key2) {
 
-  return obj;
+
 }
 ```
 
@@ -270,59 +241,55 @@ function combineProperties(obj, key1, key2) {
 ```js
 describe('combineProperties', function() {
 
-    var obj1 = {
-        a: 10,
-        b: 3,
-        c: 8,
-        d: 7
-      };
+  var obj1 = {
+      a: 10,
+      b: 3,
+      c: 8,
+      d: 7
+    };
 
-    var obj2 = {
-      num1: 100,
-      num2: -50,
-      num3: 60
-    }
+  var obj2 = {
+    num1: 100,
+    num2: -50,
+    num3: 60
+  }
 
+  it("should retun an object", function() {
+    var obj = {...obj1};
+    expect(combineProperties(obj, 'a', 'b') ).to.be.an('object')
+  })
 
+  it("should return the given object", function() {
+    var obj = {...obj1};
+    expect(combineProperties(obj, 'a', 'b') ).to.eq(obj)
+  })
 
+   it("should add the correct expected property", function() {
 
+     const testObj1 = combineProperties({...obj1},'a', 'b');
+     const testObj2 = combineProperties({...obj2},'num1', 'num3');
 
-    it("should retun an object", function() {
-      var obj = {...obj1};
-      expect(combineProperties(obj, 'a', 'b') ).to.be.an('object')
-    })
+     expect(testObj1).to.have.property('ab');
+     expect(testObj2).to.have.property('num1num3');
 
-    it("should return the given object", function() {
-      var obj = {...obj1};
-      expect(combineProperties(obj, 'a', 'b') ).to.eq(obj)
-    })
-
-     it("should add the correct expected property", function() {
-
-       const testObj1 = combineProperties({...obj1},'a', 'b');
-       const testObj2 = combineProperties({...obj2},'num1', 'num3');
-
-       expect(testObj1).to.have.property('ab');
-       expect(testObj2).to.have.property('num1num3');
-
-    })
+  })
 
 
-    it("should have the correct number of properties", function() {
+  it("should have the correct number of properties", function() {
 
-      const keys1 = Object.keys(combineProperties({...obj1}, 'a', 'b' ));
-      const keys2 = Object.keys(combineProperties({...obj2}, 'num1', 'num3'));
-        
-      expect(keys1).to.have.lengthOf(5);
-      expect(keys2).to.have.lengthOf(4);
+    const keys1 = Object.keys(combineProperties({...obj1}, 'a', 'b' ));
+    const keys2 = Object.keys(combineProperties({...obj2}, 'num1', 'num3'));
+      
+    expect(keys1).to.have.lengthOf(5);
+    expect(keys2).to.have.lengthOf(4);
 
-    })
+  })
 
-    it("should not loop over an object", function() {
-      const func = combineProperties({...obj1},'a', 'b').toString();
-   expect(func).to.not.include('Object.keys');
-      expect(func).to.not.include("Object.values");
-    })
+  it("should not loop over an object", function() {
+    const func = combineProperties({...obj1},'a', 'b').toString();
+    expect(func).to.not.include('Object.keys');
+    expect(func).to.not.include("Object.values");
+  })
 
 })
 ```
@@ -340,11 +307,10 @@ describe('combineProperties', function() {
 ### !question
 
 
-  Given two objects (`obj1` and `obj2`) that both have a property 'hello', return `1` if `obj1`  has 'world' as the value, 2 if the second object has 'world', and -1 if neither have 'world' as a value.
+  Given two objects (`obj1` and `obj2`) that both have a property 'hello', return `1` if `obj1`  has `"world"` as the value, `2` if the second object has `"world"`, and `-1` if neither have `"world"` as a value.  
+    
+  Note:  
   Only one or neither object will have 'world' as the value at 'hello'.
-        
- 
-
 ```js
 
    var obj1 = {
@@ -361,8 +327,7 @@ describe('combineProperties', function() {
       yo: 'world'
     }
     
-    var actual = whereIsWorld(obj1, obj2);
-    var expected = 1;
+    console.log(whereIsWorld(obj1, obj2)) //=> 1
       
 ``` 
 
@@ -385,40 +350,36 @@ function whereIsWorld(obj1, obj2) {
 ```js
 describe('whereIsWorld', function() {
 
-    const obj1 = {
-      test: 'jumping jacks',
-      hello: 'world',
-      bees: 'sting',
-      answer: 'world'
-    };
-    
-    const obj2 = {
-      jet: 'stream',
-      pillow: 'sleep',
-      hello: 'hey',
-      yo: 'world'
-    }
+  const obj1 = {
+    test: 'jumping jacks',
+    hello: 'world',
+    bees: 'sting',
+    answer: 'world'
+  };
+  
+  const obj2 = {
+    jet: 'stream',
+    pillow: 'sleep',
+    hello: 'hey',
+    yo: 'world'
+  }
 
-    const obj3 = {hello: 'not world'};
-    const obj4 = {hello: 'other', freeze: 'tag'};
+  const obj3 = {hello: 'not world'};
+  const obj4 = {hello: 'other', freeze: 'tag'};
 
-    it("should return a number", function() {
-      expect(whereIsWorld({...obj1}, {...obj2})).to.be.a('number');
-    })
+  it("should return a number", function() {
+    expect(whereIsWorld({...obj1}, {...obj2})).to.be.a('number');
+  })
 
-    it("should return -1 if 'world' is not found at property 'hello'", function() {
- 
-      expect(whereIsWorld({...obj3},{...obj4})).to.deep.eq(-1);
-
-    })
+  it("should return -1 if 'world' is not found at property 'hello'", function() {
+    expect(whereIsWorld({...obj3},{...obj4})).to.deep.eq(-1);
+  })
 
 
-    it("should return the correct number", function() {
-        
-      expect(whereIsWorld({...obj1}, {...obj2})).to.deep.eq(1);
-      expect(whereIsWorld({...obj3}, {...obj1})).to.deep.eq(2);
-
-    })
+  it("should return the correct number", function() { 
+    expect(whereIsWorld({...obj1}, {...obj2})).to.deep.eq(1);
+    expect(whereIsWorld({...obj3}, {...obj1})).to.deep.eq(2);
+  })
 
 })
 ```
@@ -436,7 +397,7 @@ describe('whereIsWorld', function() {
 
 ### !question
 
-  Given an array of objects `arr` and a key `term`, return true if every object has the given term as a key and false if not. 
+  Given an array of objects `arr` and a key `term`, return `true` if every object has the given term as a key and `false` if any objects do not have the given term. 
         
  
 
@@ -464,11 +425,8 @@ describe('whereIsWorld', function() {
       },
     ]
         
-    var actual1 = everyObject(arr, 'really');
-    var expected = true;
-    var actual2 = everyObject(arr, 'wanna');
-    var expected2 = false;
-    
+    console.log(everyObject(arr, 'really')) //=> true
+    console.log(everyObject(arr, 'wanna')) //=> false
       
 ``` 
 
@@ -491,52 +449,52 @@ function everyObject(arr, term) {
 ```js
 describe('everyObject', function() {
 
-    var arr = [
-      {
-        'if': 'you',
-        really: 'wanna',
-        be: 'my',
-        'get': 'with',
-        my: 'friend'
-      },
-      {
-        I: 'really',
-        really: 'really',
-        wanna: 'say'
-      },
-      {
-        zigazig: 'ah',
-        what: 'I',
-        want: 'really',
-        really: 'want',
-        my: 'friend'
-      },
-    ]
+  var arr = [
+    {
+      'if': 'you',
+      really: 'wanna',
+      be: 'my',
+      'get': 'with',
+      my: 'friend'
+    },
+    {
+      I: 'really',
+      really: 'really',
+      wanna: 'say'
+    },
+    {
+      zigazig: 'ah',
+      what: 'I',
+      want: 'really',
+      really: 'want',
+      my: 'friend'
+    },
+  ]
 
-    var arr2 = [
-      {a: 'test'}
-    ]
-
-
-    it("should return a boolean", function() {
-      expect(everyObject([...arr], 'really')).to.be.a('boolean');
-       expect(everyObject([...arr], 'French')).to.be.a('boolean');
-    })
-
-    it("should return the correct boolean", function() {
- 
-      expect(everyObject([...arr], 'really')).to.deep.eq(true);
-      expect(everyObject([...arr], 'wanna')).to.deep.eq(false);
-      expect(everyObject([...arr2], 'a')).to.deep.eq(true);
-      expect(everyObject([...arr2], 'b')).to.deep.eq(false);
+  var arr2 = [
+    {a: 'test'}
+  ]
 
 
-    })
+  it("should return a boolean", function() {
+    expect(everyObject([...arr], 'really')).to.be.a('boolean');
+     expect(everyObject([...arr], 'French')).to.be.a('boolean');
+  })
+
+  it("should return the correct boolean", function() {
+
+    expect(everyObject([...arr], 'really')).to.deep.eq(true);
+    expect(everyObject([...arr], 'wanna')).to.deep.eq(false);
+    expect(everyObject([...arr2], 'a')).to.deep.eq(true);
+    expect(everyObject([...arr2], 'b')).to.deep.eq(false);
 
 
-    it("should not use Object.keys or Object.values", function() {
-     expect(everyObject([...arr], 'a', 'b').toString()).to.not.include('Object');   
-    })
+  })
+
+
+  it("should not use Object.keys or Object.values", function() {
+   expect(everyObject([...arr], 'a', 'b').toString()).to.not.include('Object');   
+  })
 
 })
 ```
@@ -556,9 +514,7 @@ describe('everyObject', function() {
 
 ### !question
 
-  Given an array of objects and a key (term), return true if any object has the given term and false if no objects have the given term. 
-        
- 
+  Given an array of objects `arr` and a key `term`, return `true` if any object has the given term and `false` if no objects have the given term. 
 
 ```js
 
@@ -584,14 +540,11 @@ describe('everyObject', function() {
       },
     ]
         
-      var actual1 = anyObject(arr, 'really');
-      var expected = true;
+    console.log(anyObject(arr, 'really')) //=> true 
 
-      var actual2 = anyObject(arr, 'wanna');
-      var expected2 = true;
+    console.log(anyObject(arr, 'wanna')) //=> true
 
-      var actual3 = anyObject(arr, 'friend');
-      var expected3 = false;
+    console.log(anyObject(arr, 'friend')) //=> false
       
 ``` 
 
@@ -677,7 +630,7 @@ describe('anyObject', function() {
 
 ### !question
 
-Given an array of objects and a key `term`, return true if only one object has the given property and false if more than one or no objects contain the term as a key.
+Given an array of objects `arr` and a key `term`, return `true` if only one object has the given property and `false` if more than one or no objects contain the term as a key.
         
  
 
@@ -705,14 +658,11 @@ Given an array of objects and a key `term`, return true if only one object has t
       },
     ]
         
-    var actual1 = everyObject(arr, 'really');
-    var expected = false;
+    console.log(everyObject(arr, 'really')) //=> false
 
-    var actual2 = everyObject(arr, 'wanna');
-    var expected2 = true;
+    console.log(everyObject(arr, 'wanna')) //=> true
 
-    var actual3 = everyObject(arr, 'my');
-    var expected3 = false;
+    console.log(everyObject(arr, 'my')) //=> false
   
 ``` 
 

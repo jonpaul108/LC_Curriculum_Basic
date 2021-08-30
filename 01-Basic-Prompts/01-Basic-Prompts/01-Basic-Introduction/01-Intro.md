@@ -1,7 +1,4 @@
-# Read Me - Intro
-  
-
- ## Welcome
+# Introduction
 ######
 Welcome to the basic section of the Laser Coaching curriculum. Here you will refresh and hone skills requiring accurate, precise knowledge of the basic building blocks of Javascript. Through prompts challenging you on a variety of topics, from accessing data structures to complex looping mechanisms, you will level up both problem solving ability and coding syntax knowledge. 
 ######

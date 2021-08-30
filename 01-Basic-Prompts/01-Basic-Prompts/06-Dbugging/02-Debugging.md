@@ -1,34 +1,3 @@
-# Debugging
-
-The final unit of the basic section, `debugging`, introduces you to debugging. Here you will be confronted with written code containing one or more logical errors. 
-######
-*It is your goal to solve the prompts based on the intention of the original coder, not to resolve these prompts from scratch*.  
- 
-Most of the necessary changes are very small. By working to understand how the code works and why the code is incorrect, you should come to an understanding of these small but significant errors.
-######
-This platform is limited in the ability to debug. It is advisable to use a repl or IDE (such as VS code) in your efforts to debug. 
-######
-When debugging, and the error is not obvious, you should:
-- log
-- read code using example data
-- run test data
-- understand the bug before making changes (i.e. not engaging in "try and see" style of debugging)
-######
-By implementing the above strategies, you should be able to solve the prompt by:
-- finding and understanding the bug
-- making small changes to fix the issues
-- not deleting and starting over
-
-##
-
-### Objectives
-By the end of this unit, you should have:
-- better understanding of common errors
-- begun to acquire a process for debugging
-- deepened ability to read code written by others
-- reviewed some common methods
-- reviewed basic JS syntax
-
 
 ### !challenge
 
@@ -40,13 +9,12 @@ By the end of this unit, you should have:
 ### !question
 
 
-Given a string `str`, a starting index `start`, and an ending index `end`, get the characters from the start to end. The string should be inclusive of the start and end.
-      
+Given a string `str`, a starting index `start`, and an ending index `end`, get the characters from the start to end. The string should be inclusive of the start and end.  
+        
 *The next problem will have you solve this with a method. This time, attempt to fix the issue using the for loop.*
 
 ```js
-    var actual = startToEnd1('telescope', 2, 5);
-    var expected = 'lesc';
+    console.log(tartToEnd1('telescope', 2, 5)) //=>'lesc'
 ``` 
 
 ### !end-question
@@ -108,15 +76,16 @@ describe('startToEnd1', function() {
 ### !question
 
 
-*This problem is exactly the same as above. This time, correct the use of "slice" to solve the issue.*
-
-Given a string, a starting index, and an ending index, get the characters from the start to end. The string should be inclusive of the start and end.
+*This problem is exactly the same as above. This time, correct the use of "slice" to solve the issue.*  
+  
+Given a string `str`, a starting index `start`, and an ending index `end`, return the characters from `start` to `end`.  
+  
+Note:  
+The return string should be inclusive of the characters found at`start` and `end`.
       
-     
-
+    
 ```js
-    var actual = startToEnd2('telescope', 2, 5);
-    var expected = 'lesc';
+    console.log(startToEnd2('telescope', 2, 5)) //=> 'lesc'
 ``` 
 
 ### !end-question
@@ -173,14 +142,16 @@ describe('startToEnd2', function() {
 ### !question
 
 
-Given a string `str`, a starting index `start`, and an ending index `end`,  return a new string of the characters from `start` to `end`. The new string should be exclusive of `start` and `end`.
-      
-*The next problem will have you solve this with a method. This time, attempt to fix the issue using a 'for' loop.*
-     
+Given a string `str`, a starting index `start`, and an ending index `end`,  return a new string of the characters from `start` to `end`.  
+  
+Note:  
+The new string should be exclusive of `start` and `end`.  
+        
+*The next problem will have you solve this with a method. This time, attempt to fix the issue using a 'for' loop.*  
+  
 
 ```js
-    var actual = exclusive1('telescope', 2, 5);
-    var expected = 'es';
+    console.log(exclusive1('telescope', 2, 5)) //=> expected = 'es'
 ``` 
 
 ### !end-question
@@ -239,16 +210,16 @@ describe('exclusive1', function() {
 * title: Exclusive 2
 
 ### !question
-
-
-Given a string `str`, a starting index `start`, and an ending index `end`,  return a new string of the characters from `start` to `end`. The new string should be exclusive of `start` and `end`.
-      
-*This problem is the same as the problem above. Solve it by debugging the "slice" method.*
-     
-
+  
+*This problem is the same as the problem above. Solve it by debugging the "slice" method.*   
+  
+Given a string `str`, a starting index `start`, and an ending index `end`,  return a new string of the characters from `start` to `end`.  
+  
+Note:  
+The new string should be exclusive of `start` and `end`.
+  
 ```js
-    var actual = exclusive2('telescope', 2, 5);
-    var expected = 'es';
+    console.log(exclusive2('telescope', 2, 5))  //=> expected = 'es'
 ``` 
 
 ### !end-question
@@ -305,13 +276,12 @@ describe('exclusive2', function() {
 ### !question
 
 
-Given a string `name`, return a string containing `name` and `'hello'` separated by a comma and a space
+Given a string `name`, return a string containing `name` and `"hello"` separated by a comma and a space.
 
      
 
 ```js
-    var actual = concatMe('Josh');
-    var expected = 'Josh, hello';
+    console.log(concatMe('Josh')) //=> 'Josh, hello'
 ``` 
 
 ### !end-question
@@ -433,7 +403,7 @@ describe('replaceChar', function() {
 
 ### !question
 
-`DefaultKey` takes in three arguments: an object `obj`, a key `k`, and a value `val`. If `k` is not a property on the given `obj`, add the property with `val` as the value at `k`. Return the given object. 
+Given three arguments: an object `obj`, a key `k`, and a value `val`, `k` is not a property on the given `obj`, add the property with `val` as the value at `k`. Return the given object. 
 
      
 
@@ -458,12 +428,14 @@ var testObj2 = {
   f: 'guard',
 }
 
-actual2 = defaultKey(testObj2, 'a', 'free');
-expected2 = {
-  a: 'bee',
-  c: 'deli',
-  f: 'guard',
-}
+console.log(efaultKey(testObj2, 'a', 'free')) //=> 
+/*
+  {
+    a: 'bee',
+    c: 'deli',
+    f: 'guard',
+  }
+*/
 ``` 
 
 ### !end-question
@@ -545,7 +517,7 @@ describe("defaultKey", function () {
 
 ### !question
 
-`findIndex` takes in an array of objects `arrOfObj` and string `key`. It should return the index of `arrayOfObj` where `key` exists as a property. Return -1 if `key` is not found.
+Given an array of objects `arrOfObj` and string `key`, return the index of `arrayOfObj` where `key` exists as a property. Return `-1` if `key` is not found.
 
      
 
@@ -557,8 +529,7 @@ var arr = [
   {time: 'to get a watch'},
 ];
 
-var actual = findIndex(accessArr, 'weird')
-var expected = 2;
+console.log(findIndex(accessArr, 'weird')) //=> 2
 
 
 ``` 
@@ -648,21 +619,18 @@ var arr2 = [
 ### !question
 
 
-Given an array of strings `arrOfStr` and a target character `target`, return a new array of each element of `arrOfStr` having the `target` character replaced with a space. 
-Notes:
+Given an array of strings `arrOfStr` and a target character `target`, return a new array of each element of `arrOfStr` having the `target` character replaced with a space.  
+   
+Notes:  
 The target will appear only once in each string
    
 
 ```js
-  var arr1 = ['tall_tell', 'jumping_frogs','serious_dogs']
-  var char1 = '_';
-  var actual1 = splitAtChar(arr1, char1);
-  var expected1 = ['tall tell', 'jumping frogs', 'serious dogs'];
+  var arr1 = ["tall_tell", "jumping_frog", "serious_dogs"]
+  console.log(plitAtChar(arr1, "_")) //=> ['tall tell', 'jumping frogs', 'serious dogs']
 
-  var arr2 = ['aba', 'aba','aba']
-  var char2 = 'b';
-  var actual2 = splitAtChar(arr2, char2);
-  var expected2 = ['a a', 'a a', 'a a'];
+  var arr2 = ["aba", "aba", "aba"]
+  console.log(splitAtChar(arr2, "b")) //=> ['a a', 'a a', 'a a']
 ``` 
 
 ### !end-question
