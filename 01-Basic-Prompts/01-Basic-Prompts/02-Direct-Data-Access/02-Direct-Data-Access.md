@@ -346,7 +346,7 @@ describe('nestedAccess', function() {
 
 ### !question
 
-Given an array of weather information `weather` and an index number `ind`, return the weather information found at the key 'expected weather' at the given index.
+Given an array of weather information `weather` and an index number `ind`, return the weather information found at the key `"expected weather"` at the given index.
 ```js
   var weatherArr = [
         {

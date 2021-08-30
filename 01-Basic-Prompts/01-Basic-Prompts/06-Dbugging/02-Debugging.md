@@ -9,7 +9,7 @@
 ### !question
 
 
-Given a string `str`, a starting index `start`, and an ending index `end`, get the characters from the start to end. The string should be inclusive of the start and end.  
+Given a string `str`, a starting index `start`, and an ending index `end`, return a new string of the characters from the start to end. The new string should be inclusive of `start` and `end`.  
         
 *The next problem will have you solve this with a method. This time, attempt to fix the issue using the for loop.*
 
@@ -81,7 +81,7 @@ describe('startToEnd1', function() {
 Given a string `str`, a starting index `start`, and an ending index `end`, return the characters from `start` to `end`.  
   
 Note:  
-The return string should be inclusive of the characters found at`start` and `end`.
+The return string should be inclusive of the characters found at `start` and `end`.
       
     
 ```js
@@ -403,7 +403,7 @@ describe('replaceChar', function() {
 
 ### !question
 
-Given three arguments: an object `obj`, a key `k`, and a value `val`, `k` is not a property on the given `obj`, add the property with `val` as the value at `k`. Return the given object. 
+Given three arguments: an object `obj`, a key `k`, and a value `val`, if `k` is not a property on the given `obj` add the property with `val` as the value at `k`. Return the given object. 
 
      
 

@@ -1,9 +1,9 @@
 # Direct Data Access
 
-This unit challenges understanding of data access using dot and bracket notation, indexes, and keys.
+This unit challenges your understanding of accessing data and data structures.
 
 ### Objectives
-The goal is for you to review or gain the following:
+By practicing these problems, you will review or gain the following:
 - *Strong skills working with string and array indexes*
 - *Accurate implementation of dot vs bracket* 
 - *Understand chaining dot and bracket* 

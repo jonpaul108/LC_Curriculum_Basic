@@ -3,8 +3,7 @@
 This set of prompts focuses on working with objects.
 
 ### Objectives
- By manipulating data from object literals based on given arguments, you practice or gain the following:
-
+By practicing these problems, you will review or gain the following:
 - *Greater comprehension of prompt directions using instructions and inputs/outputs*
 - *Correct application of dot/bracket notation*
 - *Increased confidence solving complex objects without the use of 'for...in' iterations or built in methods*

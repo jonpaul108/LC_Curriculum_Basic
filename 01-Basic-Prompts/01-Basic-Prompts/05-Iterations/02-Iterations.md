@@ -9,9 +9,9 @@
 
 
 Write a function named `pushEveryIndex`
-  Given an array of strings `arr`, push every index and the word found at the index to a new array return the new array.
+  Given an array of strings `arr`, push every index and the word found at the index to a new array. Return the new array.
   
-  The format should look like: 
+  Follow this format when formulating your return value: 
   `[[index]: [word], [index]: [word]]`
 
 ```js
@@ -198,7 +198,7 @@ describe('startToEnd', function() {
 
 ### !question
 
-Given an array or a string `data` and a number `num`, iterate over `data` from 0 by `num` and push each element or character to a new array. Return the new array. If num is less than or equal to 0, return an empty array
+Given an array or a string `data` and a number `num`, iterate over `data` from 0 by `num` and push each element or character to a new array. Return the new array. If `num` is less than or equal to `0`, return an empty array
 
 
 ```js
@@ -295,7 +295,7 @@ describe('iterateByNum', function() {
  Given a string or an array of characters `data` and a target character `target`, return the index of the first instance (starting from index 0) `target` appears in `data`. Return `-1` if `target` is not found.  
    
   Note:  
- *Do not use the 'split' method.*
+ Do not use the 'split' method.
 
 ```js
   var chars1 = 'find me waiting';
@@ -368,7 +368,7 @@ describe('firstInstance', function() {
  Given a string or an array of characters `chars` and a target character `target`, return the index of the last instance `target` is found in `chars`. Return `-1` if `target` is not found.  
    
 Note:  
- Do not use the 'split' method.
+Do not use the 'split' method.
   
 
 ```js
@@ -566,7 +566,7 @@ describe('twoIndexesExclusive', function() {
 
 ### !question
 
-  Given a string or an array of characters `chars` and a target character `target`, return `true` if every character in `chars` matches `target` or `false` if any characters do nto match `target`.
+  Given a string or an array of characters `chars` and a target character `target`, return `true` if every character in `chars` matches `target` or `false` if any characters do not match `target`.
   
 
 ```js

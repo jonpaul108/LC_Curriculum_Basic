@@ -96,7 +96,7 @@ describe('fallbackKey', function() {
 ### !question
 
 
-`stringOrArrayOfNums` takes in an object `obj` and a string `myKey`. The key either references an array of numbers or a string. If the key is a string, return it. If it is an array, sum the numbers and return the total as a string.  
+Given an object `obj` and a string `myKey` that references an array of numbers or a string, return the value found at `myKey` if it is a string. If the value at `myKey` is an array, sum the numbers and return the total as a string.  
   
 Note: search "MDN toString" for a helpful method if you need help converting a number to a string
 
@@ -197,8 +197,7 @@ describe('stringOrArrayOfNums', function() {
   Notes:
   - The new key should be the combined keys. 
   - The new value is the sum.
-  ######
-  **Best Practices Note: Generally, it is considered bad form to mutate an array or object received as an argument. However, the focus of this problem is on accessing and assigning new properties. It is acceptable in this problem for the sake of learning and practice. For more info, read here: https://blog.sapegin.me/all/avoid-mutation/. Don't worry if you don't fully understand the explanation. It would be a great concept to discuss with your coach.
+  - Generally, it is considered bad form to mutate an array or object received as an argument. However, the focus of this problem is on accessing and assigning new properties. It is acceptable in this problem for the sake of learning and practice. For more info, read (here)[https://blog.sapegin.me/all/avoid-mutation/]. Don't worry if you don't fully understand the explanation. It would be a great concept to discuss with your coach.
 
 
 ```js
@@ -310,7 +309,7 @@ describe('combineProperties', function() {
   Given two objects (`obj1` and `obj2`) that both have a property 'hello', return `1` if `obj1`  has `"world"` as the value, `2` if the second object has `"world"`, and `-1` if neither have `"world"` as a value.  
     
   Note:  
-  Only one or neither object will have 'world' as the value at 'hello'.
+  Only one or neither object will have `"world"` as the value at `"hello"`.
 ```js
 
    var obj1 = {
