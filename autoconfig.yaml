@@ -13,23 +13,38 @@ Standards:
   - success criteria
   ContentFiles:
   - Type: Lesson
-    Path: /01-Basic-Prompts/01-Basic-Prompts/01-Read-me.md
-    UID: 8774c2ecccf067bf8b60c856208b74d8
+    Path: /01-Basic-Prompts/01-Basic-Introduction/01-Intro.md
+    UID: ccb4582aa2b6090926a55535be07f65d
   - Type: Lesson
-    Path: /01-Basic-Prompts/01-Basic-Prompts/02-Data-Access.md
-    UID: 7eb9fe61a037e54a0974ce725b605de7
+    Path: /01-Basic-Prompts/02-Direct-Data-Access/01-Intro.md
+    UID: 27076ad028b926b6f634fd83e410926e
   - Type: Lesson
-    Path: /01-Basic-Prompts/01-Basic-Prompts/03-Objects.md
-    UID: e70a5795a97bfbe8bfce89ca27331743
+    Path: /01-Basic-Prompts/02-Direct-Data-Access/02-Direct-Data-Access.md
+    UID: 6357736b6d9e32dbe9666107f835983a
   - Type: Lesson
-    Path: /01-Basic-Prompts/01-Basic-Prompts/04-Strings.md
-    UID: 9a382794b3100ff97482e9a75d1fe2e2
+    Path: /01-Basic-Prompts/03-Objects/01-Intro.md
+    UID: ded5f52e69013fd2ebd80f7e314b5dbe
   - Type: Lesson
-    Path: /01-Basic-Prompts/01-Basic-Prompts/05-Iterations.md
-    UID: a134e6118b447c8cc5d4c8d044d38d56
+    Path: /01-Basic-Prompts/03-Objects/02-Objects.md
+    UID: 433defd7d68258d142fa0ae1497e95ee
   - Type: Lesson
-    Path: /01-Basic-Prompts/01-Basic-Prompts/06-Debugging.md
-    UID: bdf5952d3e7dc46dadb52e5edeb71319
+    Path: /01-Basic-Prompts/04-Strings/01-Intro.md
+    UID: 033b449616ffb2b46a65dad7ddd5d3bc
+  - Type: Lesson
+    Path: /01-Basic-Prompts/04-Strings/02-Strings.md
+    UID: fac3dbd8a2540a2b42ac9392b2d5a26e
+  - Type: Lesson
+    Path: /01-Basic-Prompts/05-Iterations/01-Intro.md
+    UID: 7a4e16c9c0a124d54f0f2cc905e59920
+  - Type: Lesson
+    Path: /01-Basic-Prompts/05-Iterations/02-Iterations.md
+    UID: 058f277f430d756eb361c6a2a097e83d
+  - Type: Lesson
+    Path: /01-Basic-Prompts/06-Debugging/01-Intro.md
+    UID: 69ccbf683271a7e6d861f2652fa993ff
+  - Type: Lesson
+    Path: /01-Basic-Prompts/06-Debugging/02-Debugging.md
+    UID: fadc4887665480d0107e9f7ad20d6b92
 - Title: Node Modules
   UID: f0871f9dd3aa6369ba02b85485c0e1c5
   Description: Node Modules
